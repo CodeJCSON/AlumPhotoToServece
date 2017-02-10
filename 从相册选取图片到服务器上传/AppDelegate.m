@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "TakePictureViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -17,6 +19,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    TakePictureViewController *vc = [[TakePictureViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    _window.rootViewController = nav;
     return YES;
 }
 
